@@ -29,4 +29,22 @@ class StudentTest {
         assertEquals("A", s.grade());
     }
 
+    @Test
+    @DisplayName("ทดสอบการเปลี่ยนชื่อ")
+    void testChangeName() {
+        s.changeName("StudentTestChanged");
+        assertEquals("StudentTestChanged", s.getName());
+    }
+
+    @Test
+    @DisplayName("ทดสอบการเช็ค ID")
+    void testisId() {
+        assertTrue(s.isId("6xxxxxxxx"));
+    }
+
+    @Test
+    @DisplayName("ทดสอบการตรวจสอบตัวอักษรในชื่อ")
+    void testIsNameContains() {
+        assertTrue(s.isNameContains("Stu"));
+    }
 }
